@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>Website</title>
+        {% endblock %}
+    </head>
+    <body>
+        <h1 class="container text-center">{% block title %} Hello World! {% endblock %}</h1>
+
+        <!-- container -->
+        <div class="container"> {% block content %}{% endblock %}</div>
+
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>

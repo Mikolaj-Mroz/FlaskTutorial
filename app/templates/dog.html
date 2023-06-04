@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Dogs{% endblock %}
+
+{% block content %}
+
+{% if not video %}
+<img src="{{ dog }}" style="max-width: 500px; margin: auto">
+{% else %}
+<video src="{{ dog }}" style="max-width: 500px; margin: auto"></video>
+{% endif %}
+
+{{ cat }}
+{% endblock %}
